@@ -4,6 +4,7 @@ import { Toaster } from 'sonner';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/react';
 import { DeepResearchProvider } from '@/lib/deep-research-context';
+import { StarryBackground } from '@/components/starry-background';
 
 import './globals.css';
 
@@ -62,11 +63,12 @@ export default async function RootLayout({
       <body className="antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <DeepResearchProvider>
+            <StarryBackground />
             <Toaster position="top-center" />
             {children}
           </DeepResearchProvider>
