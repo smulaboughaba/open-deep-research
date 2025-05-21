@@ -288,7 +288,7 @@ function PureBlock({
         >
           {!isMobile && (
             <motion.div
-              className="fixed bg-background h-dvh"
+              className="fixed bg-black/60 h-dvh"
               initial={{
                 width: isSidebarOpen ? windowWidth - 256 : windowWidth,
                 right: 0,
@@ -303,7 +303,7 @@ function PureBlock({
 
           {!isMobile && (
             <motion.div
-              className="relative w-[400px] bg-muted dark:bg-background h-dvh shrink-0"
+              className="relative w-[400px] bg-black/40 h-dvh shrink-0"
               initial={{ opacity: 0, x: 10, scale: 1 }}
               animate={{
                 opacity: 1,
@@ -360,7 +360,7 @@ function PureBlock({
                     setAttachments={setAttachments}
                     messages={messages}
                     append={append}
-                    className="bg-background dark:bg-muted"
+                    className="bg-black/60"
                     setMessages={setMessages}
                   />
                 </form>
@@ -369,7 +369,7 @@ function PureBlock({
           )}
 
           <motion.div
-            className="fixed dark:bg-muted bg-background h-dvh flex flex-col overflow-y-scroll border-l dark:border-zinc-700 border-zinc-200"
+            className="fixed bg-black/60 h-dvh flex flex-col overflow-y-scroll border-l dark:border-zinc-700 border-zinc-200"
             initial={
               isMobile
                 ? {

@@ -39,6 +39,17 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                   Deep Research
                 </span>
               </Link>
+              <Link
+                href="https://firecrawl.dev/"
+                onClick={() => {
+                  setOpenMobile(false);
+                }}
+                className="flex flex-row gap-3 items-center"
+              >
+                <span className="text-sm text-muted-foreground leading-3">
+                  by Firecrawl 🔥
+                </span>
+              </Link>
             </div>
             <Tooltip>
               <TooltipTrigger asChild>
